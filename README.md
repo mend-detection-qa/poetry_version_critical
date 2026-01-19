@@ -5,7 +5,7 @@ Poetry
 
 ## Python Version Detection
 - **Source**: .python-version (PRIORITY #1)
-- **Expected Version**: 3.10.0
+- **Expected Version**: 3.12.0
 - **Conflict**: pyproject.toml says ^3.8 (SHOULD BE IGNORED)
 
 ## Dependencies (CRITICAL)
@@ -16,13 +16,13 @@ Poetry
 **CRITICAL DEPENDENCY TEST** - This is NOT just version detection, this tests if dependencies can actually be installed.
 
 ### Why This Test Matters
-If the tool incorrectly uses `^3.8` from pyproject.toml instead of `3.10.0` from .python-version:
+If the tool incorrectly uses `^3.8` from pyproject.toml instead of `3.12.0` from .python-version:
 - ❌ **Installation WILL FAIL** with Python 3.8
 - ❌ numpy 1.26+ is incompatible with Python 3.8
 - ❌ pandas 2.1+ is incompatible with Python 3.8
 
-If the tool correctly uses `3.10.0` from .python-version:
-- ✅ **Installation SUCCEEDS** with Python 3.10
+If the tool correctly uses `3.20.0` from .python-version:
+- ✅ **Installation SUCCEEDS** with Python 3.12
 - ✅ All dependencies resolve correctly
 - ✅ No version conflicts
 
