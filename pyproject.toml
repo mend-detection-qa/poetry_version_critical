@@ -5,7 +5,7 @@ description = "Critical test: Dependencies REQUIRE Python 3.10+ - wrong version 
 authors = ["Test <test@example.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+# python = "^3.8"
 # CRITICAL: These packages require Python >=3.10
 # If tool detects wrong Python version, installation WILL FAIL
 numpy = ">=1.26.0"  # Requires Python >=3.9 (for 1.26+)
